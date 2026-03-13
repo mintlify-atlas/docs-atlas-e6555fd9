@@ -1,0 +1,100 @@
+{
+  "projectType": "framework",
+  "projectName": "CoW Protocol Solver Template",
+  "projectDescription": "A Python framework for building custom solvers for CoW Protocol batch auctions",
+  "theme": "aspen",
+  "primaryColor": "#040404",
+  "lightColor": "#7c7c7c",
+  "darkColor": "#c2c2c2",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "setup"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/batch-auctions",
+              "concepts/orders",
+              "concepts/amms",
+              "concepts/solver-mechanics"
+            ]
+          },
+          {
+            "group": "Development Guide",
+            "pages": [
+              "guides/implementing-solver",
+              "guides/working-with-models",
+              "guides/testing",
+              "guides/debugging"
+            ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/docker",
+              "deployment/connecting-orderbook",
+              "deployment/production"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Server",
+            "pages": [
+              "api/endpoints",
+              "api/solver-args"
+            ]
+          },
+          {
+            "group": "Models",
+            "pages": [
+              "api/models/batch-auction",
+              "api/models/order",
+              "api/models/token",
+              "api/models/uniswap",
+              "api/models/exchange-rate"
+            ]
+          },
+          {
+            "group": "Utilities",
+            "pages": [
+              "api/utilities/schema",
+              "api/utilities/constants",
+              "api/utilities/numbers"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "FastAPI-based solver server with health and notify endpoints",
+    "Comprehensive data models for orders, tokens, and AMMs",
+    "Support for constant-product and weighted-product AMMs",
+    "Batch auction processing with customizable solver logic",
+    "Docker deployment with configurable environment settings",
+    "Integration with CoW Protocol orderbook and driver"
+  ],
+  "publicApiSurface": [
+    "POST /solve - Main endpoint for receiving and solving batch auctions",
+    "POST /notify - Notification endpoint for solution results",
+    "GET /health - Health check endpoint",
+    "BatchAuction - Core class for batch auction representation",
+    "Order - Order model with execution logic",
+    "Token - Token representation and info",
+    "Uniswap - AMM pool representation",
+    "SolverArgs - Request parameter parsing"
+  ]
+}
